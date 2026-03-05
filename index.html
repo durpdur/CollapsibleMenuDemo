@@ -1,27 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Collapsible Menu Demo</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="side_nav" class="side_nav">
-            <div class="menu_button">
-                <img src="menu_icon.svg" class="icon">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Collapsible Menu Demo</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/player_card.css" />
+  </head>
+  <body>
+    <div id="side_nav" class="side_nav">
+      <div class="menu_button">
+        <img src="menu_icon.svg" class="icon" />
+      </div>
+      <ul class="hidden">
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+        <li><a href="#section4">Section 4</a></li>
+        <li><a href="#section5">Section 5</a></li>
+      </ul>
+    </div>
+    <div id="section_container">
+      <section class="section section_even landing">
+        <h1>Hi my name is Ian!</h1>
+      </section>
+
+      <!-- Carousel -->
+      <section class="section section_odd">
+        <div class="carousel">
+          <div class="group">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+          </div>
+          <div aria-hidden class="group">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Player card -->
+      <section class="section section_even">
+        <div class="goat_wrapper">
+          <div class="img_wrapper">
+            <img src="assets/MJ.png" alt="Michael Jordan" />
+          </div>
+          <div class="player_desc">
+            <h1>Michael Jordan</h1>
+            <p>Black Mamba</p>
+          </div>
+          <div class="player_accolades">
+            <div class="accolade_entry">
+              <div class="award_img">
+                <img src="assets/nbaFinalsMVP.png" />
+              </div>
+              <div class="award_desc">
+                <p>NBA Finals MVP</p>
+                <span>6x</span>
+              </div>
             </div>
-            <ul class="hidden">
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
-                <li><a href="#section4">Section 4</a></li>
-                <li><a href="#section5">Section 5</a></li>
-            </ul>
+            <div class="accolade_entry">
+              <div class="award_img">
+                <img src="assets/NBAScoringTitles.png" />
+              </div>
+              <div class="award_desc">
+                <p>NBA Scoring Titles</p>
+                <span>10x</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="section_container">
-            <section class="section section_even landing">
-                <h1>Hi my name is Ian!</h1>
-            </section>
-        </div>
-        <script src="script.js"></script>
-    </body>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

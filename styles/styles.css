@@ -1,0 +1,131 @@
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  min-height: 60vh;
+  width: 100vw - 20px;
+  border-radius: 40px;
+  margin: 20px;
+  padding: 20px 50px;
+}
+
+.section_odd {
+  background-color: pink;
+}
+
+.section_even {
+  background-color: #e2afde;
+}
+
+/* Side Nav */
+.side_nav {
+  position: fixed;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.menu_button {
+  height: 30px;
+  width: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.side_nav li {
+  margin: 5px 20px 5px 5px;
+}
+
+.hidden {
+  display: none;
+  border: none;
+}
+
+/* Section 1 Hover*/
+#section1 {
+  transition: transform 2s ease;
+}
+
+#section1:hover {
+  transform: rotateY(180deg);
+}
+
+/* Section 2 Click */
+@keyframes hop {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(-5%);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  85% {
+    transform: translateY(-2.5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hop {
+  animation: hop 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Smooth Scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  border: 2px solid red;
+  display: flex;
+  overflow-x: auto;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 5s infinite linear;
+}
+
+.card {
+  flex: 0 0 5em;
+  height: 5em;
+  padding: 1em;
+  background: cornflowerblue;
+  font-size: 3rem;
+  border-radius: 0.2em;
+  border: 2px solid black;
+  text-align: center;
+  align-content: center;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
