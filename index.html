@@ -10,6 +10,7 @@
 
     <title>Collapsible Menu Demo</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/carousel.css" />
     <link rel="stylesheet" href="styles/player_card.css" />
   </head>
   <body>
@@ -25,29 +26,96 @@
         <li><a href="#section5">Section 5</a></li>
       </ul>
     </div>
+
     <div id="section_container">
       <section class="section section_even landing">
         <h1>Hi my name is Ian!</h1>
       </section>
 
-      <!-- Carousel -->
+      <!-- Carousels -->
       <section class="section section_odd">
+        <!-- Carousel 1 -->
         <div class="carousel">
-          <div class="group">
-            <div class="card">1</div>
-            <div class="card">2</div>
-            <div class="card">3</div>
-            <div class="card">4</div>
-            <div class="card">5</div>
-            <div class="card">6</div>
+          <div class="track">
+            <div class="group">
+              <div class="card">
+                <a href="#lapel_pins_title">
+                  <img src="assets/lapel_pins.png" alt="lapel_pins" />
+                </a>
+              </div>
+              <div class="card">
+                <a href="#enamel_pins_title">
+                  <img src="assets/enamel_pins.png" alt="enamel_pins" />
+                </a>
+              </div>
+              <div class="card">3</div>
+              <div class="card">4</div>
+              <div class="card">5</div>
+              <div class="card">6</div>
+            </div>
+            <!-- Duplicate -->
+            <div aria-hidden class="group">
+              <div class="card">
+                <a href="#lapel_pins_title">
+                  <img src="assets/lapel_pins.png" alt="lapel_pins" />
+                </a>
+              </div>
+              <div class="card">
+                <a href="#enamel_pins_title">
+                  <img src="assets/enamel_pins.png" alt="enamel_pins" />
+                </a>
+              </div>
+              <div class="card">3</div>
+              <div class="card">4</div>
+              <div class="card">5</div>
+              <div class="card">6</div>
+            </div>
           </div>
-          <div aria-hidden class="group">
-            <div class="card">1</div>
-            <div class="card">2</div>
-            <div class="card">3</div>
-            <div class="card">4</div>
-            <div class="card">5</div>
-            <div class="card">6</div>
+        </div>
+
+        <!-- Carousel 2 -->
+        <div class="carousel">
+          <div class="track">
+            <div class="group group_odd">
+              <div class="card">1</div>
+              <div class="card">2</div>
+              <div class="card">3</div>
+              <div class="card">4</div>
+              <div class="card">5</div>
+              <div class="card">6</div>
+            </div>
+            <!-- Duplicate -->
+            <div aria-hidden class="group group_odd">
+              <div class="card">1</div>
+              <div class="card">2</div>
+              <div class="card">3</div>
+              <div class="card">4</div>
+              <div class="card">5</div>
+              <div class="card">6</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel 3 -->
+        <div class="carousel">
+          <div class="track">
+            <div class="group">
+              <div class="card">1</div>
+              <div class="card">2</div>
+              <div class="card">3</div>
+              <div class="card">4</div>
+              <div class="card">5</div>
+              <div class="card">6</div>
+            </div>
+            <!-- Duplicate -->
+            <div aria-hidden class="group">
+              <div class="card">1</div>
+              <div class="card">2</div>
+              <div class="card">3</div>
+              <div class="card">4</div>
+              <div class="card">5</div>
+              <div class="card">6</div>
+            </div>
           </div>
         </div>
       </section>
@@ -83,6 +151,25 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="section section_odd">
+        <h1 id="lapel_pins_title">Lapel Pins</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+          reprehenderit. Facere corrupti unde aliquid nulla, fugiat ut eos,
+          incidunt quaerat aspernatur, eveniet quisquam accusantium veritatis!
+          Quaerat asperiores blanditiis nihil facere.
+        </p>
+      </section>
+      <section class="section section_even">
+        <h1 id="enamel_pins_title">Enamel Pins</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+          reiciendis harum eum porro perspiciatis eligendi odit, quod cum! Esse
+          autem dolorem harum similique nesciunt eum blanditiis magni aliquid
+          enim voluptatibus.
+        </p>
       </section>
     </div>
     <script src="script.js"></script>

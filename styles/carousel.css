@@ -1,0 +1,85 @@
+.carousel {
+  margin: 5px auto;
+  width: 90%;
+  overflow: auto;
+  padding: 14px 0;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* To .group animation when hovering over the carousel component */
+.carousel:hover .group {
+  animation-play-state: paused;
+}
+
+.track {
+  display: flex;
+  width: max-content; /* track grows to fit both groups */
+}
+
+.group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 1em;
+  animation: spin_right 20s infinite linear;
+  padding-right: 1em;
+}
+
+.group_odd {
+  animation: spin_left 20s infinite linear;
+}
+
+@keyframes spin_right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes spin_left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.card {
+  flex: 0 0 1em; /* Card Width */
+  height: 1em; /* Card Width */
+  padding: 1em;
+  background: cornflowerblue;
+  font-size: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+  overflow: hidden;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+.card * {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+.card:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the circle */
+  object-position: center;
+  transform: scale(3);
+  display: block;
+}
